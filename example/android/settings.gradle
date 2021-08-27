@@ -1,0 +1,6 @@
+rootProject.name = 'Desk360ModuleExample'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+
+include ':reactnativedesk360module'
+project(':reactnativedesk360module').projectDir = new File(rootProject.projectDir, '../../android')
