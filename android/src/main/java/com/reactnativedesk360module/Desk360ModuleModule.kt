@@ -47,7 +47,8 @@ class Desk360ModuleModule(reactContext: ReactApplicationContext) : ReactContextB
       .addIntentFlags(
         arrayOf(
           Intent.FLAG_ACTIVITY_CLEAR_TOP,
-          Intent.FLAG_ACTIVITY_SINGLE_TOP
+          Intent.FLAG_ACTIVITY_SINGLE_TOP,
+          Intent.FLAG_ACTIVITY_NEW_TASK
         )
       )
       .name(userName)

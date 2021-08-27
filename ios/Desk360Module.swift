@@ -11,7 +11,7 @@ public class Desk360Module: NSObject {
         resolve(a*b)
     }
     
-    @objc
+    @objc(intialize:withEmail:withTarget:withPush:withDevice:withResolver:withRejecter:)
     public func intialize(userName: String, userEmail: String, targetId: String, pushToken: String, deviceId: String, resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
         let props = Desk360Properties(
             appID: APP_KEY,
@@ -24,9 +24,11 @@ public class Desk360Module: NSObject {
         Desk360.start(using: props)
     }
     
-    @objc
+    @objc(show:withRejecter:)
     public func show(resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
-        guard let topVC = UIApplication.shared.delegate?.window??.rootViewController else {return}
-        Desk360.show(on: topVC, animated: true)
+        DispatchQueue.main.async {
+            guard let topVC = UIApplication.shared.delegate?.window??.rootViewController else {return}
+            Desk360.show(on: topVC, animated: true)
+        }
     }
 }
