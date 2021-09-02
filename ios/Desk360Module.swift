@@ -1,7 +1,7 @@
 import Desk360
 
 @objc(Desk360Module)
-public class Desk360Module: NSObject {
+public class Desk360Module: NSObject, RCTBridgeModule {
     private let APP_KEY = "zIu9jt0zXQCx2Kvm6S3BGu12GThMh3YM"
     override init() {
         
@@ -31,4 +31,13 @@ public class Desk360Module: NSObject {
             Desk360.show(on: topVC, animated: true)
         }
     }
+    
+    public static func requiresMainQueueSetup() -> Bool {
+        return true
+    }
+    
+    public static func moduleName() -> String! {
+        return "Desk360Module"
+    }
+
 }
