@@ -27,8 +27,14 @@ public class Desk360Module: NSObject, RCTBridgeModule {
     @objc(show:withRejecter:)
     public func show(resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
         DispatchQueue.main.async {
-            guard let topVC = UIApplication.shared.delegate?.window??.rootViewController else {return}
-            Desk360.show(on: topVC, animated: true)
+            var topVC = UIApplication.shared.delegate?.window??.rootViewController
+            while( (topVC?.presentedViewController != nil) &&
+                    topVC != topVC?.presentedViewController ){
+                topVC = topVC?.presentedViewController;
+            }
+            if topVC != nil {
+                Desk360.show(on: topVC!, animated: true)
+            }
         }
     }
     
