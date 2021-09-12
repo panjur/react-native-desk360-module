@@ -1,6 +1,7 @@
 package com.reactnativedesk360module
 
 import android.content.Intent
+import com.facebook.drawee.BuildConfig.VERSION_NAME
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
@@ -13,8 +14,6 @@ import org.json.JSONObject
 
 class Desk360ModuleModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
-
-  private val APP_KEY = "zIu9jt0zXQCx2Kvm6S3BGu12GThMh3YM"
   private var desk360Client: Desk360Client? = null
     override fun getName(): String {
         return "Desk360Module"
@@ -30,15 +29,15 @@ class Desk360ModuleModule(reactContext: ReactApplicationContext) : ReactContextB
     }
 
   @ReactMethod
-  public fun intialize(userName: String,
-                userEmail: String,
-                targetId: String,
-                pushToken: String,
-                deviceId: String,
-                promise: Promise) {
+  public fun intialize(apiKey: String,
+                       userName: String,
+                       userEmail: String,
+                       targetId: String,
+                       pushToken: String,
+                       deviceId: String,
+                       promise: Promise) {
     val desk360SDKManager = Desk360SDKManager.Builder()
-      .appKey(APP_KEY)
-      .appVersion(APP_KEY)
+      .appKey(apiKey).appVersion(VERSION_NAME)
       .languageCode("en")
       .environment(Environment.PRODUCTION)
       .platform(Platform.GOOGLE)

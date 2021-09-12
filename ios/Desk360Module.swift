@@ -2,7 +2,6 @@ import Desk360
 
 @objc(Desk360Module)
 public class Desk360Module: NSObject, RCTBridgeModule {
-    private let APP_KEY = "zIu9jt0zXQCx2Kvm6S3BGu12GThMh3YM"
     override init() {
         
     }
@@ -11,10 +10,10 @@ public class Desk360Module: NSObject, RCTBridgeModule {
         resolve(a*b)
     }
     
-    @objc(intialize:withEmail:withTarget:withPush:withDevice:withResolver:withRejecter:)
-    public func intialize(userName: String, userEmail: String, targetId: String, pushToken: String, deviceId: String, resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
+    @objc(intialize:withName:withEmail:withTarget:withPush:withDevice:withResolver:withRejecter:)
+    public func intialize(apiKey: String, userName: String, userEmail: String, targetId: String, pushToken: String, deviceId: String, resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
         let props = Desk360Properties(
-            appID: APP_KEY,
+            appID: apiKey,
             deviceID: deviceId,
             environment: .production,
             language: "en",
@@ -22,11 +21,13 @@ public class Desk360Module: NSObject, RCTBridgeModule {
         )
         
         Desk360.start(using: props)
+        
+        resolve(true)
     }
     
     @objc(show:withRejecter:)
     public func show(resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             var topVC = UIApplication.shared.delegate?.window??.rootViewController
             while( (topVC?.presentedViewController != nil) &&
                     topVC != topVC?.presentedViewController ){
@@ -34,6 +35,9 @@ public class Desk360Module: NSObject, RCTBridgeModule {
             }
             if topVC != nil {
                 Desk360.show(on: topVC!, animated: true)
+//                resolve("show")
+            } else {
+                
             }
         }
     }

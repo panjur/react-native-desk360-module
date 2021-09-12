@@ -5,8 +5,7 @@ import Desk360Module from 'react-native-desk360-module';
 
 export default function App() {
   React.useEffect(() => {
-    Desk360Module.intialize('Amir Doreh', 'string@123', '123', 'string', 'string')
-    
+    Desk360Module.intialize('YOUR DESK360 APP KEY', 'Amir Doreh', 'string@123', '123', 'string', 'string')
   }, []);
 
   return (

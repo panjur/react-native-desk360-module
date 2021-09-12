@@ -16,7 +16,7 @@ import Desk360Module from "react-native-desk360-module";
 // ...
 // initilaize
 //  targetId, pushtoken, name, email are optional you can send empty strings
-Desk360Module.intialize('name', 'email', 'targetId', 'pushtoken', 'deviceId')
+Desk360Module.intialize('YOUR DESK360 APP KEY', 'name', 'email', 'targetId', 'pushtoken', 'deviceId')
 
 //show
 Desk360Module.show()

@@ -16,7 +16,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* Desk360ModuleExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Desk360ModuleExampleTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		D0280C3849BC7E300CFB7A06 /* Pods_Desk360ModuleExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CCA62C5CE4AB7FC3AC65D2 /* Pods_Desk360ModuleExample.framework */; };
+		D3FEBC70C48FCB37F7FCC951 /* Pods_Desk360ModuleExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DC0A8D5F75E818102C108C /* Pods_Desk360ModuleExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +49,9 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Desk360ModuleExample/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* Desk360ModuleExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desk360ModuleExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Desk360ModuleExample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desk360ModuleExample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DC0A8D5F75E818102C108C /* Pods_Desk360ModuleExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desk360ModuleExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F7ED3B7971BE374F7B8635 /* Pods-Desk360ModuleExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desk360ModuleExample.debug.xcconfig"; path = "Target Support Files/Pods-Desk360ModuleExample/Pods-Desk360ModuleExample.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Desk360ModuleExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A5CCA62C5CE4AB7FC3AC65D2 /* Pods_Desk360ModuleExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desk360ModuleExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00ACF0FDA8BF921659E2F9A /* Pods-Desk360ModuleExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desk360ModuleExample.release.xcconfig"; path = "Target Support Files/Pods-Desk360ModuleExample/Pods-Desk360ModuleExample.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0280C3849BC7E300CFB7A06 /* Pods_Desk360ModuleExample.framework in Frameworks */,
+				D3FEBC70C48FCB37F7FCC951 /* Pods_Desk360ModuleExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +126,7 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				A5CCA62C5CE4AB7FC3AC65D2 /* Pods_Desk360ModuleExample.framework */,
+				43DC0A8D5F75E818102C108C /* Pods_Desk360ModuleExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

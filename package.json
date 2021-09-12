@@ -1,6 +1,6 @@
 {
   "name": "react-native-desk360-module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Desk360 Bridge for RN",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
