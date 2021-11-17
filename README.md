@@ -16,7 +16,8 @@ import Desk360Module from "react-native-desk360-module";
 // ...
 // initilaize
 //  targetId, pushtoken, name, email are optional you can send empty strings
-Desk360Module.intialize('YOUR DESK360 APP KEY', 'name', 'email', 'targetId', 'pushtoken', 'deviceId')
+// for version name you can use import 'deviceInfoModule' from react-native-device-info and use it const versionName = deviceInfoModule.getVersion();
+Desk360Module.intialize('versionName' ,'YOUR DESK360 APP KEY', 'name', 'email', 'targetId', 'pushtoken', 'deviceId')
 
 //show
 Desk360Module.show()
