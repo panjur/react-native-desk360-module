@@ -10,8 +10,8 @@ public class Desk360Module: NSObject, RCTBridgeModule {
         resolve(a*b)
     }
     
-    @objc(intialize:withName:withEmail:withTarget:withPush:withDevice:withResolver:withRejecter:)
-    public func intialize(apiKey: String, userName: String, userEmail: String, targetId: String, pushToken: String, deviceId: String, resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
+    @objc(intialize:withKey:withName:withEmail:withTarget:withPush:withDevice:withResolver:withRejecter:)
+    public func intialize(appVersionName: String, apiKey: String, userName: String, userEmail: String, targetId: String, pushToken: String, deviceId: String, resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
         let props = Desk360Properties(
             appID: apiKey,
             deviceID: deviceId,

@@ -6,7 +6,7 @@ RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(intialize:(NSString*)apiKey withName:(NSString*)userName withEmail:(NSString*)userEmail withTarget:(NSString*)targetId withPush:(NSString*)pushToken withDevice:(NSString*)deviceId
+RCT_EXTERN_METHOD(intialize:(NSString*)appVersionName withKey:(NSString*)apiKey withName:(NSString*)userName withEmail:(NSString*)userEmail withTarget:(NSString*)targetId withPush:(NSString*)pushToken withDevice:(NSString*)deviceId
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 

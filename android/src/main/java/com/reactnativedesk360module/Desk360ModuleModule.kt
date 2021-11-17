@@ -1,7 +1,6 @@
 package com.reactnativedesk360module
 
 import android.content.Intent
-import com.facebook.drawee.BuildConfig.VERSION_NAME
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
@@ -29,7 +28,8 @@ class Desk360ModuleModule(reactContext: ReactApplicationContext) : ReactContextB
     }
 
   @ReactMethod
-  public fun intialize(apiKey: String,
+  public fun intialize(appVersionName: String,
+                       apiKey: String,
                        userName: String,
                        userEmail: String,
                        targetId: String,
@@ -37,7 +37,7 @@ class Desk360ModuleModule(reactContext: ReactApplicationContext) : ReactContextB
                        deviceId: String,
                        promise: Promise) {
     val desk360SDKManager = Desk360SDKManager.Builder()
-      .appKey(apiKey).appVersion(VERSION_NAME)
+      .appKey(apiKey).appVersion(appVersionName)
       .languageCode("en")
       .environment(Environment.PRODUCTION)
       .platform(Platform.GOOGLE)

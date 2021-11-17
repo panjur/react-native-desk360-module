@@ -2,7 +2,7 @@ import { NativeModules } from 'react-native';
 
 type Desk360ModuleType = {
   multiply(a: number, b: number): Promise<number>;
-  intialize(userName: string, userEmail: string, targetId: string, pushToken: string, deviceId: string): Promise<number>;
+  intialize(appVersionName: string, apiKey: string, userName: string, userEmail: string, targetId: string, pushToken: string, deviceId: string): Promise<number>;
   show(): Promise<number>;
 };
 
